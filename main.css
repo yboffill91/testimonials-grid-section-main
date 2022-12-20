@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow+Semi+Condensed:wght@500;700&family=Inter:wght@400;700;800&family=Open+Sans:ital,wght@0,700;1,500&family=Poppins:ital,wght@1,500&display=swap");
 .attribution {
   font-size: 11px;
@@ -15,8 +19,7 @@
   --lightGrayishBlue: hsl(210, 46%, 95%);
 }
 body {
-  margin: 0;
-  padding: 0;
+  
   font-size: 13px;
   font-weight: 500;
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -26,7 +29,7 @@ body {
   width: 95%;
   max-width: 1000px;
   display: grid;
-  margin: auto;
+  margin: 5% auto 15PX auto;
   grid-template-areas:
     "Daniel Daniel Jonathan Kira"
     "Janet Patrick Patrick Kira";
@@ -46,6 +49,9 @@ body {
 .daniel{
     grid-area: Daniel;
     background-color: var(--moderateViolet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-position-x: 75%;
+    background-repeat: no-repeat;
 }
 .jonathan{
     grid-area: Jonathan;
@@ -65,6 +71,36 @@ body {
     grid-area: Patrick;
     background-color: var(--veryDarkBlackishBlue);
 }
+.encabezado img{
+  float: left;
+  border-radius: 50%;
+  margin-right: 4px;
+  border: solid;
+  border-color:hsla(263, 55%, 52%,0.6) ;
+  width: 42px;
+}
+.encabezado h1{
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.encabezado h2{
+  font-size: 13px;
+  font-weight: 500;
+  color: hsl(240, 0%, 57%);
+  margin-top: 0px;
+}
+.primeras{
+  font-size: 15px;
+  font-weight: 700;
+  margin: 15px auto;
+}
+p {
+  font-size: 13px;
+  font-weight: 500;
+  color: hsl(240, 0%, 57%);
+  margin-top: 0px;
+}
 /*-----------------------------------------------------------------------------Tablet--*/
 @media screen and (max-width: 768px) {
   .contenedor {
@@ -75,6 +111,7 @@ body {
       "Janet Patrick Patrick ";
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
+    margin: 10px auto;
   }
 }
 /*-----------------------------------------------------------------------------Mobile--*/
@@ -89,5 +126,6 @@ body {
       "Kira";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
+    margin: auto;
   }
 }
