@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow+Semi+Condensed:wght@500;700&family=Inter:wght@400;700;800&family=Open+Sans:ital,wght@0,700;1,500&family=Poppins:ital,wght@1,500&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+:root {
+  --moderateViolet: hsl(263, 55%, 52%);
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --veryDarkBlackishBlue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --lightGray: hsl(0, 0%, 81%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--lightGrayishBlue);
+}
+.contenedor {
+  width: 95%;
+  max-width: 1000px;
+  display: grid;
+  margin: auto;
+  grid-template-areas:
+    "Daniel Daniel Jonathan Kira"
+    "Janet Patrick Patrick Kira";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 15px;
+}
+.caja{
+    border: 0px;
+    box-shadow: 2px 2px 5px var(--lightGray);
+    border-radius: 10px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    color: var(--White);
+}
+.daniel{
+    grid-area: Daniel;
+    background-color: var(--moderateViolet);
+}
+.jonathan{
+    grid-area: Jonathan;
+    background-color: var(--veryDarkGrayishBlue);
+}
+.kira{
+    grid-area: Kira;
+    background-color: var(--White);
+    color: var(--veryDarkBlackishBlue);
+}
+.janet{
+    grid-area: Janet;
+    background-color: var(--White);
+    color: var(--veryDarkBlackishBlue);
+}
+.patrick{
+    grid-area: Patrick;
+    background-color: var(--veryDarkBlackishBlue);
+}
+/*-----------------------------------------------------------------------------Tablet--*/
+@media screen and (max-width: 768px) {
+  .contenedor {
+    max-width: 570px;
+    grid-template-areas:
+      "Daniel Daniel Jonathan "
+      "Kira Kira Kira"
+      "Janet Patrick Patrick ";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+/*-----------------------------------------------------------------------------Mobile--*/
+@media screen and (max-width: 576px) {
+  .contenedor {
+    max-width: 370px;
+    grid-template-areas:
+      "Daniel"
+      "Jonathan"
+      "Janet"
+      "Patrick"
+      "Kira";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+}
