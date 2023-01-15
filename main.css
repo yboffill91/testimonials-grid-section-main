@@ -6,17 +6,18 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin: 2%;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color:var(--moderateViolet);
 }
 :root {
-  --moderateViolet: hsl(263, 55%, 52%);
-  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
-  --veryDarkBlackishBlue: hsl(219, 29%, 14%);
-  --White: hsl(0, 0%, 100%);
-  --lightGray: hsl(0, 0%, 81%);
-  --lightGrayishBlue: hsl(210, 46%, 95%);
+  --moderateViolet: #7541c8;
+  --veryDarkGrayishBlue: #48556a;
+  --veryDarkBlackishBlue: #19212e;
+  --White: #ffffff;
+  --lightGray: #cfcfcf;
+  --lightGrayishBlue: #ecf2f8;
 }
 body {
   
@@ -25,11 +26,17 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   background-color: var(--lightGrayishBlue);
 }
+.colornegro{
+  color: var(--veryDarkBlackishBlue);
+}
+.colorblanco{
+  color: var(--White);
+}
 .contenedor {
   width: 95%;
   max-width: 1000px;
   display: grid;
-  margin: 5% auto 15PX auto;
+  margin: 1% auto 15PX auto;
   grid-template-areas:
     "Daniel Daniel Jonathan Kira"
     "Janet Patrick Patrick Kira";
@@ -44,7 +51,6 @@ body {
     padding: 5%;
     display: flex;
     flex-direction: column;
-    color: var(--White);
 }
 .daniel{
     grid-area: Daniel;
@@ -60,12 +66,10 @@ body {
 .kira{
     grid-area: Kira;
     background-color: var(--White);
-    color: var(--veryDarkBlackishBlue);
 }
 .janet{
     grid-area: Janet;
     background-color: var(--White);
-    color: var(--veryDarkBlackishBlue);
 }
 .patrick{
     grid-area: Patrick;
@@ -98,7 +102,6 @@ body {
 p {
   font-size: 13px;
   font-weight: 500;
-  color: hsl(240, 0%, 57%);
   margin-top: 0px;
 }
 /*-----------------------------------------------------------------------------Tablet--*/
